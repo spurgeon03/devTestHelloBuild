@@ -41,5 +41,22 @@ next init the front with the next command in root folder:
 cd front/ && npm run start
 ```
 
+# Backend
+The backend is build Node.js and connect with a database in MyQL
+
+## Endpoints
+
+### Register
+```
+Route:
+/auth/signup
+
+json:
+{
+  username,
+  password
+}
+```
+
 # Server Running
 The front will run in the 3000 port and the back will run in 3001 port
