@@ -1,0 +1,39 @@
+version: '3'
+services:
+  api:
+    build: back
+    volumes:
+      - ./back:/var/www/app
+    working_dir: /var/www/app/
+    links:
+      - db
+    ports:
+      - "3001:8080"
+    networks:
+      vip:
+        ipv4_address: 192.167.58.99
+    command: node server.js
+  db:
+    image: mysql:latest
+    restart: always
+    volumes:
+       - ./init.sql:/data/application/init.sql
+       - ./data/mysql:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password --innodb-use-native-aio=0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: dbhello
+      MYSQL_USER: dbhello
+      MYSQL_PASSWORD: secret
+    networks:
+      vip:
+        ipv4_address: 192.167.58.4
+networks:
+  vip:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.167.58.0/24

@@ -1,0 +1,17 @@
+.sign-in-form {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+}
+
+.sign-in-form .margin-form{
+    margin: 10px 0px;
+}
+
+.sign-in-form h1{
+    margin-top: 25px;
+    text-align: center;
+}

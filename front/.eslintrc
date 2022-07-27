@@ -1,0 +1,31 @@
+{
+    "extends": ["plugin:prettier/recommended"],
+    "plugins": ["prettier"],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "requireConfigFile": false,
+      "babelOptions": {
+        "parserOpts": {
+          "plugins": ["jsx"]
+        }
+      }
+    },
+    "rules": {
+      "prettier/prettier": ["error"],
+      "react/prop-types": "off",
+      "react/jsx-props-no-spreading": ["off"],
+      "react/no-array-index-key": 0,
+      "no-console": 0,
+      "indent": ["error", 2],
+      "jsx-a11y/label-has-associated-control": "off"
+    },
+    "globals": {
+      "window": true,
+      "document": false
+    },
+    "env": {
+      "jest": true
+    }
+}

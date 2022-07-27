@@ -1,0 +1,28 @@
+.RepositoriesSearch {
+  background: #f9fbfc;
+  border-radius: 2px;
+  border: 2px solid #202329;
+  margin: 0 24px;
+  height: 64px;
+  width: calc(100% - 62px);
+  font-size: 24px;
+  text-align: center;
+  font-family: "arial";
+  font-weight: 400;
+  color: #1e1e1f;
+  box-shadow: 0px 5px 5px rgba(32, 35, 41, 0.25);
+}
+
+.RepositoriesSearch::placeholder {
+  color: #a5a5a5;
+  font-family: "arial";
+  font-weight: 400;
+}
+
+.RepositoriesSearch:focus {
+  outline-color: #61dafa;
+}
+
+.RepositoriesSearch:disabled {
+  opacity: 25%;
+}

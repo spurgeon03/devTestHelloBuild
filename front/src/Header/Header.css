@@ -1,0 +1,30 @@
+.Header > .User {
+  text-align: right;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.Header > .Username {
+  margin-right: 10px;
+}
+
+.Header .ButtonLog {
+  width: calc(100% - 62px);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+  width: auto;
+  height: auto;
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: none;
+  background-color: #0e1414;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.5);
+  margin: 0px 10px;
+}
+
+.Header > .Logout:hover {
+  background: #c2c2c2;
+}
