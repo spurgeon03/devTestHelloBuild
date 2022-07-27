@@ -43,13 +43,16 @@ cd front/ && npm run start
 
 # Backend
 The backend is build Node.js and connect with a database in MyQL
+```
+http://localhost:3001/api/
+```
 
 ## Endpoints
 
 ### Register
 ```
 Route:
-/auth/signup
+auth/signup
 
 json:
 {
@@ -57,6 +60,66 @@ json:
   password
 }
 ```
+
+### Login
+```
+Route:
+auth/signin
+
+json:
+{
+  username,
+  password
+}
+```
+
+### Logout
+```
+Route:
+auth/signout
+```
+
+# Frontend
+The frontend is build with React.js
+```
+http://localhost:3000/
+```
+
+## Routes
+
+### Login
+```
+/login
+```
+
+### Register
+```
+/signup
+```
+
+### Home
+List my repositories
+```
+Protected View
+
+/
+```
+
+### Favorites
+List my favorites repositories
+```
+Protected View
+
+/favorites
+```
+
+### Profile
+```
+Protected View
+
+/profile 
+```
+
 
 # Server Running
 The front will run in the 3000 port and the back will run in 3001 port
